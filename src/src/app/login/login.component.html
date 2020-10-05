@@ -1,0 +1,87 @@
+<!-- <div class="title">
+    <h2>Patient Login Portal</h2>
+</div>
+
+
+<div class="content">
+    <form class="form" [formGroup]= "patientLoginForm" (ngSubmit)="patientLogin()">
+
+        <div class="header">
+            <h3> Login Here..!  </h3>
+        </div>
+
+        <div>
+            <label for="patientEmailid">Username:</label>
+            <input type="text" id="patientEmailid" placeholder="Enter Username"  formControlName="patientEmailid">
+        </div>
+        <br>
+        <br>
+        <div>
+            <label for="patientPassword">Password:</label>
+            <input type="password" id="patientPassword" placeholder="Enter Password"  formControlName="patientPassword">
+        </div>
+        <br><br>
+        <div>
+            <button type="submit">Login</button>
+        </div>
+
+        <div *ngIf = "errorMessage">
+            {{errorMessage}}
+        </div>
+    </form>
+</div> -->
+
+<div>
+    <div class="topnav">
+      <h2>Patient Login Portal</h2>
+  
+      <div class="nav">
+        <h2> <a href="#">About</a> </h2>
+        <h2> Contact Details </h2>
+        
+      </div>
+    </div>
+  
+  
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+    <form [formGroup] = "patientLoginForm" (ngSubmit)="patientLogin()">
+      <div class="imgcontainer">
+        <img src="assets/profileIcon3.png" alt="Avatar" class="avatar">
+      </div>
+  
+      <div class="container">
+        <label for="patientEmailid"><b>Email:</b></label>
+        <input type="text" placeholder="Enter Email Id" id="patientEmailid" formControlName="patientEmailid" required>
+  
+        <label for="patientPassword"><b>Password:</b></label>
+        <input type="password" placeholder="Enter Password" id="patientPassword" formControlName="patientPassword" required>
+  
+        <!-- <button type="submit">Login</button> -->
+        <a [routerLink]="['/display']" routerLinkActive="active" class="button">Login</a>
+        <!-- <h1 *ngIf = "successMessage">
+          {{successMessage}}
+        </h1> -->
+       
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+  
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+
+    <!-- <router-outlet></router-outlet> -->
+    
+    
+  
